@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get "/projects", to: "pages#project_index"
+
+  # Poject generator - JSON Format
+  get "/project_generator", to: "pages#project_generator"
+
 end
